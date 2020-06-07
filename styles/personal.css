@@ -32,6 +32,11 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.2;
+    overflow-y: hidden;
+    height: 0;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out, height 1.5s ease-in-out;
 }
 
 .desc-head-main > p {
@@ -47,19 +52,22 @@ body {
     margin: 2% 5% 2% 0;
     color: #8299a8;
     letter-spacing: 1.5px;
+    transform: translateX(500px);
+    opacity: 0;
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
 }
 
 .interests {
     color: #8299a8;
     font-family: "Baloo";
     width: 80%;
+    font-size: 1em;
     display: inline-block;
     margin: 2% 0;
 }
 
 .interests > #hobbies {
     color: #77f9ff;
-    margin-left: 1%;
     letter-spacing: 1px;
 }
 
