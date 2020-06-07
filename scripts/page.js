@@ -3,6 +3,7 @@ $(window).on("load", () => {
     $("#nav2-2").addClass("active-nav");
     $(".container > p").css({padding: 0});
 });
+
 $("nav2 > ul > li > a").on("click", function() {
     $("#nav1-2").removeClass("active");
     $("#nav2-2").removeClass("active-nav");

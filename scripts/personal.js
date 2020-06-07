@@ -12,5 +12,10 @@ $(window).on("load", function() {
         yp += ((mouseY - yp)/6);
         $(":root").css("--mouse-x", xp +'px').css("--mouse-y", yp +'px');
     }, 20);
-
+    
+    $("#nav2-3").addClass("active-nav");
 })
+
+$("nav2 > ul > li > a").on("click", function() {
+    $("#nav2-3").removeClass("active-nav");
+});
