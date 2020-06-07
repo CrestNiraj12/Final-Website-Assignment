@@ -4,10 +4,6 @@ body {
     background-blend-mode: color-burn;
 }
 
-.header {
-    padding-top: 30px;
-}
-
 .container {
     color: #fff;
     margin: 5%;

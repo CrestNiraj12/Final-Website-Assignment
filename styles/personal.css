@@ -1,0 +1,160 @@
+body {
+    background-color: #fff;
+}
+
+.mover {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: var(--mouse-x);
+    top: var(--mouse-y);
+    z-index: 999;
+}
+
+.header {
+    background-color: #263133;
+}
+
+
+.container {
+    margin: 6.5vh 10%;
+    height: 100vh;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.desc-head-main {
+    font-family: "Montaga";
+    font-size: 4.2vw;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.desc-head-main > p {
+    margin: 0;
+}
+
+.desc-head-left {
+    float: left;
+    font-family: "Baloo";
+    width: 25%;
+    height: max-content;
+    font-size: 1.2vw;
+    margin: 2% 5% 2% 0;
+    color: #8299a8;
+    letter-spacing: 1.5px;
+}
+
+.interests {
+    color: #8299a8;
+    font-family: "Baloo";
+    width: 80%;
+    display: inline-block;
+    margin: 2% 0;
+}
+
+.interests > #hobbies {
+    color: #77f9ff;
+    margin-left: 1%;
+    letter-spacing: 1px;
+}
+
+.media {
+    text-align: right;
+    float: right;
+    width: 20%;
+    margin-top: 1%;
+    letter-spacing: 1px;
+}
+
+.media > p {
+    color: #77f9ff;
+    display: inline-block;
+    font-size: 1em;
+}
+
+.media > ul {
+    list-style: none;
+    margin: 1%;
+}
+
+.media > ul > li {
+    margin: 1% 0;
+}
+
+.media > ul > li > a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Baloo";
+}
+
+#content {
+    margin: 10%;
+}
+
+.skills > h1 {
+    text-align: center;
+    font-family: "Montaga";
+    font-weight: normal;
+    margin-top: 10%;
+}
+
+.skill {
+    margin: 10% 0;
+    height: 65vh;
+}
+
+.img-wrap {
+    width: 700px;
+}
+
+.skill-left > .img-wrap {
+    float: left;
+}
+
+.skill-right > .img-wrap {
+    float: right;
+}
+
+.img-wrap > img {
+    width: 100%;
+    height: 60vh;
+    filter: contrast(0.35) saturate(0.25);
+}
+
+.text-wrap {
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+}
+
+.skill-left > .text-wrap {
+    text-align: left;
+    margin: 10% 0 10% 25%;
+}
+
+.skill-right > .text-wrap {
+    text-align: right;
+    margin: 10% 25% 10% 0%;
+}
+
+.text-wrap > h1 {
+    font-family: "Montaga";
+    font-size: 5vw;
+    font-weight: normal;
+    margin: 0;
+}
+
+.text-wrap > p {
+    font-size: 1em;
+    text-indent: 10px;
+}
+
+.skill-right > .text-wrap > p {
+    margin-right: 10px;
+}
+

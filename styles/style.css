@@ -79,6 +79,10 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+.header {
+    padding-top: 30px;
+}
+
 /* Preloader */
 
 #preloader {
