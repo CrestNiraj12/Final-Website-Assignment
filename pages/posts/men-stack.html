@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en-US">
+     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Niraj Shrestha's blog</title>
+        <script src="../../scripts/jquery-3.4.1.min.js"></script>
+         <link rel="stylesheet" href="../../styles/style.css" type="text/css">
+        <link rel="stylesheet" href="../../styles/nav.css" type="text/css">
+        <link rel="stylesheet" href="../../styles/post.css" type="text/css">
+         <link rel="stylesheet" href="../../styles/footer.css" type="text/css">
+        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <style>
+            .title {
+                font-size: 3vw;
+            }
+            
+            pre {
+                white-space: pre-line;
+                overflow: auto;
+            }
+            
+            ol > li {
+                font-family: "Baloo";
+                font-weight: normal;
+                letter-spacing: 1px;
+                line-height: 1.5;
+                color: #fff;
+            }
+
+            .code {
+                background: #3d3d3d;
+                padding: 1% 2%;
+                color: #bababa;
+                margin: 5% 0;
+            }
+            
+            @media (max-width: 600px) {
+                .title {
+                    line-height: 2;
+                }
+            }
+            
+            @media (max-width: 450px) {
+                .title {
+                    margin: 20% 0;
+                    font-size: 4.5vw;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=133277950707510&autoLogAppEvents=1"></script>
+        <div id="preloader">
+            <div id="status"></div>
+        </div>
+        <div class="header-wrapper">
+            <div class="header">
+                <nav class="nav1">
+                    <div class="navLogo">
+                        <a href="../../index.html"><img src="../../images/logo.png" alt="logo"></a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="../../index.html" id="nav1-1">Home</a></li>
+                            <li><a href="../contact.html" id="nav1-2">Contact</a></li>
+                            <li><a href="#" id="nav1-3">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <nav class="stickNav">
+                    <div class="navLogo">
+                        <a href="../../index.html"><img src="../../images/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="explore">
+                        <p>Explore</p>
+                        <div class="show-icon">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </nav>
+                <div id="overlay"></div>
+                <div class="nav2">
+                    <div class="navLogo">
+                        <a href="../../index.html"><img src="../../images/logo.png" alt="logo"></a>
+                    </div>
+                    <ul>
+                        <li><a href="../../index.html" id="nav2-1">Home</a></li>
+                        <li><a href="../contact.html" id="nav2-2">Contact</a></li>
+                        <li><a href="#" id="nav2-3">Portfolio</a></li>
+                    </ul>
+                    <div class="info">
+                        <a href="https://www.facebook.com/crestniraz" target="_blank"><img src="../../images/fb.svg" alt="facebook logo icon"></a>
+                        <a href="https://www.instagram.com/crestniraz" target="_blank"><img src="../../images/insta.svg" alt="instagram logo icon"></a>
+                        <a href="https://www.github.com/crestniraj12" target="_blank"><img src="../../images/github.svg" alt="github logo icon"></a>
+                        <hr>
+                        <p>Niraj Shrestha<br><br>Buddhanagar, Kathmandu<br><br></p>
+                        <hr>
+                        <div class="contact">
+                            <a href="mailto:crestniraj@gmail.com" target="_blank"><img src="../../images/mail.svg" alt="mail icon"><p>crestniraj@gmail.com</p></a>
+                            <hr>
+                            <a href="tel:+9779821911389" target="_blank"><img src="../../images/call.svg" alt="phone icon"><p>+977 - 9821911389</p></a>
+                        </div>
+                    </div>
+                    <div class="close-icon">
+                        <svg data-v-020a9390="" viewBox="0 0 33 34" xmlns="http://www.w3.org/2000/svg" style="height: 35px; line-height: 35px;">
+                            <g stroke="#96cdef" fill="none" fill-rule="evenodd" stroke-linecap="round">
+                                <path d="M31.396 1.396L.152 32.641M31.648 32.648L.5 1.5"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="container">
+                    <h2 class="crumb"><a href="../../index.html">Home</a> / <a href="../../index.html">Pages</a> / <a href="../../index.html">Posts</a> /</h2>
+                    <h1 class="title">Nodejs, Express and Mongodb Simple App</h1>
+                    <div class="author-info">
+                        <a href="https://www.github.com/CrestNiraj12" target="_blank"><img src="../../images/niraj1.JPG" alt="author image"></a>
+                        <div>Author<br><br><span><a href="https://www.github.com/CrestNiraj12" target="_blank">Niraj Shrestha</a></span></div>
+                        <div title="Originally published in 24/05/2020">Last Updated<br><br><span>24/05/2020</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="content">
+                <p>We are going to learn basic operation using node and mongo and also use nodemon I remember when I eventually picked up the courage to try, I had such a hard time understanding the documentation for Express, MongoDB, and Node that I gave up.</p>
+                <p>One month later, I finally understood how to work with these tools. Then, I decided to write a comprehensive blog so you won’t have to go through the same headache I went through.
+                one thing you need to install node …. I know you can do this…. nodejs
+                To check if you have Node installed, open up your command line and run the following code: $node -v You should get a version number if you have Node installed. If you don’t, you can install Node either.</p>
+                <img src="../../images/men.png" alt="Header image">
+                <p>Start by creating a folder for this project. Feel free to call it anything you want. Once you navigate into it, run the npm init command. This command creates a package.json file which helps you manage dependencies that we install later in the blog.
+                The simplest way to use node is to run the node command and specify a path to a file. Let’s create a file called server.js to run node with</p>
+                <div class="code"><code>$ touch server.js</code></div>
+                <p>When the execute the server.js file, we want to make sure it’s running properly. To do so, simply write a console.log statement in server.js</p>
+                <div class="code"><code>console.log('pdp pdp pdp pdp')</code></div>
+                <p>Now, run node server.js in your command line and you should see the statement you logged — — pdp pdp pdp pdp
+                We first have to install Express before we can use it in our application. Installing Express is pretty easy. All we have to do is run an install command with Node package manager (npm), which comes bundled with Node. Run the npm install express --save command in your command line</p>
+                <div class="code"><code>$ npm install express --save</code></div>
+                <p>Once you’re done, you should see that npm has saved Express as a dependency in package.json</p>
+                <p>Next, we use express in server.js by requiring it.</p>
+                <div class="code">
+                    <pre><code>const express = require('express');
+                    const app = express();</code></pre></div>
+                <p>The first thing we want to do is to create a server where browsers can connect. We can do so with the help of a listen method provided by Express:</p>
+                <div class="code"><pre><code>
+                    app.listen(3000, function() {
+                      &nbsp;console.log('listening on 3000')
+                    })
+                </code></pre></div>
+                <p>Now, run node server.js and navigate to localhost:3000 on your browser. You should see a message that says “cannot get /”. nice great news just kidding….. this is just beginning. The READ operation is performed by browsers whenever you visit a webpage. Under the hood, browsers send a GET request to the server to perform a READ operation. The reason we see the “cannot get /” error is because we have yet to send anything back to the browser from our server.</p>
+                <p>In Express, we handle a GET request with the get method:</p>
+                <div class="code"><code>app.get(path, callback)</code></div>
+                <p>The first argument, path, is the path of the GET request. It’s anything that comes after your domain name.
+                When we’re visiting localhost:3000, our browsers are actually looking for localhost:3000/. The path argument in this case is /.The second argument is a callback function that tells the server what to do when the path is matched. It takes two arguments, a request object and a response object:</p>
+                <div class="code"><pre><code>app.get('/', function (request, response) {
+                       &nbsp;// work here
+                    })
+                </code></pre></div>
+                <p>For now, let’s write “PDP” back to the browser. We do so by using a send method that comes with the response object:</p>
+                <div class="code"><pre><code>app.get('/', function(req, res) {
+                       &nbsp;res.send('PDP')
+                    })
+                </code></pre></div>
+                <p>I’m going to start writing in ES6 code and show you how to convert to ES6 along the way as well. First off, I’m replacing function() with an ES6 arrow function. The below code is the same as the above code:</p>
+                <div class="code"><pre><code>app.get('/', (req, res) => {
+                       &nbsp;res.send('PDP') 
+                    })
+                </code></pre></div>
+                <p>Now, restart your server by doing the following:</p>
+                <ol>
+                    <li>Stop the current server by hitting CTRL + C in the command line.</li>
+                    <li>Run node server.js again.</li>
+                </ol>
+                <p>Then, navigate to localhost:3000 on your browser. You should be able to see a string that says “PDP”.</p>
+                <p>Great. Let’s change our app so we serve an index.html page back to the browser instead. To do so, we use the sendFile method that’s provided by the res object.</p>
+                <div class="code"><code>res.sendFile(__dirname + '/index.html')</code></div>
+                <p>In the sendFile method above, we told Express to serve an index.html file that can be found in the root of your project folder. We don’t have that file yet. Let’s make it now.</p>
+                <div class="code"><code>touch index.html</code></div>
+                <p>Let’s put some text in our index.html file as well:</p>
+                <div class="code"><pre><code>&nbsp;&lt;!DOCTYPE html&gt;
+                    &nbsp;&lt;html lang="en"&gt;
+                        &nbsp;&nbsp;&lt;head&gt;
+                           &nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;
+                           &nbsp;&nbsp;&nbsp;&lt;title&gt;MY APP&lt;/title&gt;
+                        &nbsp;&nbsp;&lt;/head&gt;
+                    &nbsp;&nbsp;&lt;body&gt;
+                        &nbsp;&nbsp;&nbsp;May Node and Express be with you.
+                    &nbsp;&nbsp;&lt;/body&gt;
+                    &nbsp;&lt;/html&gt;
+                </code></pre></div>
+                <p>Restart your server and refresh your browser. You should be able to see the results of your HTML file now.</p>
+                <p>This is how Express handles a GET request (READ operation) in a nutshell.</p>
+                <p>At this point, you probably have realized that you need to restart your server whenever you make a change to server.js. This is process is incredibly tedious, so let’s take a quick detour and streamline it by using a package called nodemon.</p>
+                <p>Nodemon restarts the server automatically whenever you save a file that the server uses. We can install Nodemon by using the following command:</p>
+                <div class="code"><code>$ npm install nodemon --save-dev</code></div>
+                <p>Note: The reason we’re using a --save-dev flag here is because we’re only using Nodemon when we’re developing. This flag would save Nodemon as a devDependency in your package.json file.
+                Moving on, Nodemon behaves exactly the same as node, which means we can run our server by calling nodemon server.js. However, we can’t do it in the command line right now because Nodemon isn’t installed with a -g flag.</p>
+                <p>There’s one other way to run Nodemon — we can execute Nodemon from the node_modules folder. The code looks like this:</p>
+                <div class="code"><code>$ ./node_modules/.bin/nodemon server.js</code></div>
+                <p>That’s a handful to type. One way to make it simpler is to create a script key in package.json.</p>
+                <div class="code"><pre><code>"scripts": {
+                      &nbsp;"dev": "nodemon server.js"
+                    }
+                </code></pre></div>
+                <p>Now, you can run npm run dev to trigger nodemon server.js.</p>
+                <p>Back to the main topic. We’re going to cover the CREATE operation next.</p>
+                <p>The CREATE operation is only performed by the browser if a POSTrequest is sent to the server. This POST request can be triggered either with JavaScript or through a &lt;form&gt; element. </p>
+                <p>Let’s find out how to use a &lt;form&gt; element to create new entries for our Star Wars quote app for this part of the tutorial.</p>
+                <p>To do so, you first have to create a &lt;form&gt; element and add it to your index.html file. You need to have three things on this form element:</p>
+                <ol>
+                    <li>An action attribute,</li>
+                    <li>a method attribute,</li>
+                    <li>and name attributes on all &lt;input&gt; elements within the form.</li>
+                </ol>
+                <div class="code"><pre><code>&lt;form action="/quotes" method="POST"&gt;
+                        &nbsp;&lt;input type="text" placeholder="name" name="name"&gt;
+                        &nbsp;&lt;input type="text" placeholder="quote" name="quote"&gt;
+                        &nbsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;
+                    &lt;/form&gt;
+                </code></pre></div>
+                <p>The action attribute tells the browser where to navigate to in our Express app. In this case, we’re navigating to /quotes. The methodattribute tells the browser what request to send. In this case, it’s a POST request.</p>
+                <p>On our server, we can handle this POST request with a post method that Express provides. It takes the same arguments as the GET method:</p>
+                <div class="code"><pre><code>app.post('/quotes', (req, res) => { 
+                      &nbsp;console.log('Hellooooooooooooooooo!')
+                    })
+                </code></pre></div>
+                <p>Restart your server (hopefully you’ve set up Nodemon so it restarts automatically) and refresh your browser. Then, enter something into your form element. You should be able to see Hellooooooooooooooooo!in your command line.</p>
+                <p>Great, we know that Express is handling the form for us right now.</p>
+                <p>Express now contains body-parser which is a middleware. You’ll hear the term middleware a lot when dealing with Express. These things are basically plugins that change the request or response object before they get handled by our application.</p>
+                <div class="code"><pre><code>const express = require('express')
+                    const app = express()  
+                    app.use(express.urlencoded({extended: true}))
+                </code></pre></div>
+                <p>The urlencoded method within express tells express to extract data from the &lt;form&gt; element and add them to the body property in the request object.</p>
+                <p>Now, you should be able to see everything in the form field within the req.body object. Try doing a console.log and see what it is!</p>
+                <div class="code"><pre><code>app.post('/quotes', (req, res) => {
+                     &nbsp;console.log(req.body) 
+                    })
+                </code></pre></div>
+                <p>You should be able to get an object similar to the following in your command line:</p>
+                <div class="code"><pre><code>{
+                        &nbsp;name: 'pdp',
+                        &nbsp;quotes: 'pdp psr pdp'
+                    }
+                </code></pre></div>
+                <p>Enter the database, MongoDB<br><br>
+                We first have to install MongoDB through npm if we want to use it as our database.</p>
+                <div class="code"><code>$ npm install mongodb --save</code></div>
+                <p>Once installed, we can connect to MongoDB through the MongoClient's connect method as shown in the code below:</p>
+                <div class="code"><pre><code>const MongoClient = require('mongodb').MongoClient  MongoClient.connect('link-to-mongodb', (err, database) => {
+                           &nbsp;// ... start the server 
+                        })
+                </code></pre></div>
+                <p>The next part is to get the correct link to our database. Most people store their databases on cloud services like mLab (formerly MongoLab). We’re going to do same as well.<br><br>
+                So, go ahead and create an account with mLab. (It’s free.) Once you’re done, create a new MongoDB Deployment<br><br>
+                Once you’re done creating the deployment, head into it and create a database user and database password. Remember the database user and database password because you’re going to use it to connect the database you’ve just created.<br><br>
+                Finally, grab the MongoDB url and add it to your MongoClient.connectmethod. Make sure you use your database user and password!<br><br>
+                Next, we want to start our servers only when the database is connected. Hence, let’s move app.listen into the connect method. We’re also going to create a db variable to allow us to use the database when we handle requests from the browser.</p>
+                <div class="code"><pre><code>const client = new MongoClient(url, { useNewUrlParser: true });
+                    &nbsp;client.connect((err, database) => {
+                     &nbsp;&nbsp;db = database.db("test")
+                      &nbsp;&nbsp;app.listen(3000, function () {
+                     &nbsp;})
+                    })
+                </code></pre></div>
+                <p>We’re done setting up MongoDB. Now, let’s create a quotes collection to store quotes for our application.<br><br>
+                By the way, a collection is a named location to store stuff. You can create as many collections as you want. It can be things like “products”, “quotes”, “groceries”, or any other labels you choose.<br><br>
+                We can create the quotes collection by using the string quotes while calling MongoDB’s db.collection() method. While creating the quotes collection, we can also save our first entry into MongoDB with the savemethod simultaneously.<br><br>
+                Once we’re done saving, we have to redirect the user somewhere (or they’ll be stuck waiting forever for our server to move). In this case, we’re going to redirect them back to /, which causes their browsers to</p>
+                <div class="code"><pre><code>app.post('/quotes', (req, res) => {   db.collection('quotes').save(req.body, (err, result) => {
+                       &nbsp;if (err) return console.log(err)
+                         &nbsp;&nbsp;console.log('saved to database')
+                         &nbsp;&nbsp;res.redirect('/')
+                       &nbsp;})
+                    })
+                </code></pre></div>
+                <p>Now, if you enter something into the &lt;form&gt; element, you’ll be able to see an entry in your MongoDB collection.</p>
+                <img src="../../images/mongo.png" alt="mongodb object">
+                <p>oh, sorry button is also there maybe I made mistake but leave it now…<br><br>
+                Whoohoo! Since we already have some quotes in the collection, why not try showing them to our user when they land on our page?<br><br>
+                We have to do two things to show the quotes stored in mLab to our users.<br><br>
+                Get quotes from mLab.<br><br>
+                Use a template engine to display the quotes.<br><br>
+                Let’s go one step at a time.<br><br>
+                We can get the quotes from mLab by using the find method that’s available in the collection method.</p>
+                <div class="code"><pre><code>app.get('/', (req, res) => {
+                       &nbsp;var cursor = db.collection('quotes').find() 
+                    })
+                </code></pre></div>
+                <p>The find method returns a cursor (a Mongo object) that probably doesn’t make sense if you console.log it out. this cursor object contains all quotes from our database. It also contains a bunch of other properties and methods that allow us to work with data easily. One such method is the toArraymethod.The toArray method takes in a callback function that allows us to do stuff with quotes we retrieved from mLab. Let’s try doing a console.log() for the results and see what we get!</p>
+                <div class="code"><pre><code>var cursor = db.collection('quotes').find().toArray(function(err, result){
+                      &nbsp;console.log('kya baat bhai mast')
+                      &nbsp;if (err) { return console.log(err) }
+                         &nbsp;&nbsp;console.log('haanbhai', result)
+                      &nbsp;res.render('index.ejs', {quotes: result})
+                    })
+                </code></pre></div>
+                <p>We can’t serve our index.html file and expect quotes to magically appear because there’s no way to add dynamic content to a HTML file. What we can do instead, is to use template engines to help us out. Some popular template engines include Jade, Embedded JavaScript and Nunjucks.<br><br>
+                I’ve written extensively about the how and why of template engines in a separate post. You might want to check it out if you have no idea what template engines are. I personally use (and recommend) Nunjucks as my template engine of choice. Feel free to check out the post to find out why.<br><br>
+                For this tutorial, we’re going to use Embedded JavaScript (ejs) as our template engine because it’s the easiest to start with. You’ll find it familiar from the get-go since you already know HTML and JavaScript.<br><br>
+                We can use EJS by first installing it, then setting the view engine in Express to ejs.</p>
+                <div class="code"><code>$ npm install ejs --save</code></div>
+                <p>code in server.js</p>
+                <div class="code"><code>app.set('view engine', 'ejs')</code></div>
+                <p>Once the view engine is set, we can begin generating the HTML with our quotes. This process is also called rendering. We can use the render object built into the response object render to do so. It has the following syntax:</p>
+                <div class="code"><code>res.render(view, locals)</code></div>
+                <p>The first parameter, view, is the name of the file we’re rendering. This file must be placed within a views folder.<br><br>
+                The second parameter, locals, is an object that passes data into the view.<br><br>
+                Let’s first create an index.ejs file within the views folder so we can start populating data.</p>
+                <div class="code"><pre><code>$ mkdir views
+                    $ touch views/index.ejs
+                </code></pre></div>
+                <p>Now, place the following code within index.ejs.</p>
+                <div class="code"><pre><code>&lt;ul class="quotes"&gt;
+                       &nbsp;&lt;% for(var i=0; i&lt;quotes.length; i++) {%&gt;
+                           &nbsp;&nbsp;&lt;li class="quote"&gt;
+                             &nbsp; &nbsp;&nbsp;&lt;span&gt;&lt;%= quotes[i].name %&gt;&lt;/span&gt;
+                             &nbsp; &nbsp;&nbsp;&lt;span&gt;&lt;%= quotes[i].quote %&gt;&lt;/span&gt;
+                           &nbsp;&nbsp;&lt;/li&gt;
+                        &nbsp;&lt;% } %&gt;
+                     &lt;/ul&gt;
+                </code></pre></div>
+                <p>See what I mean when I say you’ll find it familiar? In EJS, you can write JavaScript within &lt;% and %&gt; tags. You can also output JavaScript as strings if you use the &lt;%= and %&gt; tags.<br><br>
+                Here, you can see that we’re basically looping through the quotes array and creating strings with quotes[i].name and quotes[i].quote.<br><br>
+                One more thing to do before we move on from the index.ejs file. Remember to copy the &lt;form&gt; element from the index.html file into this file as well. The complete index.ejs file so far should be:</p>
+                <div class="code"><pre><code>&lt;!DOCTYPE html&gt;
+                    &nbsp;&lt;html lang="en"&gt;
+                    &nbsp;&lt;head&gt;
+                      &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;
+                      &nbsp;&nbsp;&lt;title&gt;MY APP&lt;/title&gt;
+                    &nbsp;&lt;/head&gt;
+                    &nbsp;&lt;body&gt;
+                      &nbsp;&nbsp;May Node and Express be with you. and pdp ki blessing
+                      &nbsp;&nbsp;&lt;ul class="quotes"&gt;
+                        &nbsp;&nbsp;&nbsp;&lt;% for(var i=0; i&lt;quotes.length; i++) {%&gt;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="quote"&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;&lt;%= quotes[i].name %&gt;&lt;/span&gt;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;&lt;%= quotes[i].quote %&gt;&lt;/span&gt;
+                          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+                        &nbsp;&nbsp;&nbsp;&lt;% } %&gt;
+                      &nbsp;&nbsp;&lt;/ul&gt;
+                      &nbsp;&nbsp;&lt;form action="/quotes" method="POST"&gt;
+                        &nbsp;&nbsp;&nbsp;&lt;input type="text" placeholder="name" name="name"&gt;
+                        &nbsp;&nbsp;&nbsp;&lt;input type="text" placeholder="quote" name="quote"&gt;
+                        &nbsp;&nbsp;&nbsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;
+                      &nbsp;&nbsp;&lt;/form&gt;
+                    &nbsp;&lt;/body&gt;
+                    &lt;/html&gt;
+                </code></pre></div>
+                <p>Finally, we have to render this index.ejs file when handling the GETrequest. Here, we’re setting the results (an array) as the quotes array we used in index.ejs above.</p>
+                <div class="code"><pre><code>app.get('/', (req, res) => {
+                      &nbsp;// res.sendFile(__dirname + '/index.html');
+                      &nbsp;var cursor = db.collection('quotes').find().toArray(function(err, result){
+                        &nbsp;&nbsp;console.log('kya baat bhai mast')
+                        &nbsp;&nbsp;if (err) { return console.log(err) }
+                        &nbsp;&nbsp;&nbsp;console.log('haanbhai', result)
+                        &nbsp;&nbsp;res.render('index.ejs', {quotes: result})
+                      &nbsp;})
+                    })
+                </code></pre></div>
+                <p>Now, refresh your browser and you should be able to see quotes.</p>
+            </div>
+            <div class="fb-like" id="media1" data-href="http://nirajshrestha01.com.np/pages/posts/men-stack.html" data-width="200" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+            <div class="align-right">
+                <div class="related">
+                    <h1>Related Posts</h1>
+                    <ul>
+                        <li><a href="#">Why C is still popular?</a></li>
+                        <li><a href="#">Javascript vs Typescript</a></li>
+                        <li><a href="#">MERN vs MEAN stack</a></li>
+                        <li><a href="#">Why use MongoDB?</a></li>
+                        <li><a href="#">Python is the future</a></li>
+                    </ul>
+                </div>
+                <div class="more-info">
+                    <h1>More Information</h1>
+                    <ul>
+                        <li><a href="#">Introduction to Python Programming</a></li>
+                        <li><a href="#">Real Python</a></li>
+                        <li><a href="#">Data Analysis using Python</a></li>
+                        <li><a href="#">Google's Python Class</a></li>
+                        <li><a href="#">Getting Started with Python</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fb-like" id="media2" data-href="http://nirajshrestha01.com.np/pages/posts/men-stack.html" data-width="200" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+            <div class="comment-section">
+                <form>
+                    <fieldset>
+                        <legend>Comment</legend>
+                        <input type="text" id="name" placeholder="Enter your fullname" required>
+                        <textarea rows="5" id="text" placeholder="I like your view.."></textarea>
+                        <input type="submit" id="submit" value="Submit">
+                    </fieldset>
+                </form>
+                <div class="comments">
+                    <h1><span id="count">No</span> comment<span id="many">s</span></h1>
+                </div>
+            </div>
+        </div>
+       
+        <div class="footer">
+            <div class="info">
+                <a href="https://www.facebook.com/crestniraz" target="_blank"><img src="../../images/fb.svg" alt="facebook logo icon"></a>
+                <a href="https://www.instagram.com/crestniraz" target="_blank"><img src="../../images/insta.svg" alt="instagram logo icon"></a>
+                <a href="https://www.github.com/crestniraj12" target="_blank"><img src="../../images/github.svg" alt="github logo icon"></a>
+                <hr>
+                <p>Niraj Shrestha<br>Buddhanagar, Kathmandu<br></p>
+                <hr>
+                <div class="contact">
+                    <a href="mailto:crestniraj@gmail.com" target="_blank"><img src="../../images/mail.svg" alt="mail icon"><p>crestniraj@gmail.com</p></a>
+                    <hr>
+                    <a href="tel:+9779821911389" target="_blank"><img src="../../images/call.svg" alt="phone icon"><p>+977 - 9821911389</p></a>
+                </div>
+                </div>
+                <p><span><img src="../../images/arrow2.svg" alt="arrow svg image"></span>Go North</p>
+                <div class="links">
+                <span><a href="#">Terms & conditions</a></span>
+                <span>|</span>
+                <span><a href="#">Privacy Policy</a></span>
+                <span>|</span>
+                <span><a href="#">Cookies</a></span>
+                <span>|</span>
+                <span><a href="#">&copy; 2020 Niraj Shrestha</a></span>
+            </div>
+        </div>
+        <script src="../../scripts/nav.js"></script>
+        <script src="../../scripts/main.js"></script>
+        <script src="../../scripts/post.js"></script>
+    </body>
+</html>

@@ -1,0 +1,314 @@
+.nav1 {
+    font-family: "Baloo";
+    display: inline-flex;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9vw;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.active {
+    border-bottom: 1px solid #fff;
+}
+
+.navLogo {
+    width: 80%;
+}
+
+.navLogo > a > img {
+    width: 150px;    
+}
+
+.nav1 ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav1 ul li a, .nav2 ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav1 ul li:not(:last-child) a {
+    margin-right: 50px;
+}
+
+.nav1 ul li {
+    padding: 1vh 0;
+}
+
+.nav1 ul li:nth-child(3) {
+    text-align: center;
+    padding: 1vh 3vh;
+    border: 1px solid #fff;
+    transition: background 0.3s ease-in, color 0.5s ease-in, transform 0.2s ease-in;
+}
+
+.nav1 ul li:nth-child(3) a {
+    padding: 10% 0px;
+}
+
+.nav1 ul li:not(:last-child) a:hover {
+    border-bottom: none;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23fff' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 100%;
+    background-size: auto 6px;
+    background-repeat: repeat-x;
+}
+
+.stickNav {
+    width: 100%;
+    position: fixed;
+    background-color: #263133;
+    top: 0;
+    transform: scaleY(1.5);
+    opacity: 0;
+    z-index: -1;
+    height: 90px;
+    box-shadow: 0 0 15px 10px rgba(0,0,0,.25);
+    -webkit-box-shadow: 0 0 15px 10px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 0 15px 10px rgba(0,0,0,.25);
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-out, z-index 0.2s ease-out, height 0.2s ease-out;
+    will-change: transform, opacity, z-index, height;
+}
+
+.stickNav > .navLogo > a > img {
+    margin-left: 10%;
+    position: absolute;
+    width: 130px;
+    padding-top: 0.5%;
+}
+
+.explore {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+    display: flex;
+    flex-shrink: 0;
+    outline: none;
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    margin-top: -6.5px;
+}
+
+.explore p {
+    font-family: "Baloo";
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 0.7em;
+    margin-top: 16.5px;
+}
+
+.show-icon {
+    width: 30px;
+    height: 10vh;
+    display: block;
+    margin-left: 10px;
+}
+
+.line:first-of-type {
+    margin-top: 50%;
+}
+
+.line:not(:first-of-type) {
+    margin-top: 6px;
+}
+
+.line {
+    display: flex;
+    height: 1px;
+    background-color: #fff;
+    width: 100%;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 900;
+}
+
+.info p, .info a {
+    color: #828282;
+}
+
+.info hr {
+    border: none;
+    height: 1px;
+    background-color: #626262;
+    width: 18.5vh;
+    margin-right: 10vh;
+}
+
+.info img {
+    margin-left: -1vh;
+}
+
+.info img:hover {
+    filter: brightness(100);
+}
+
+.info a img {
+    width: 2.8vh;
+    height: auto;
+    display: inline-block;
+}
+
+.info a {
+    padding: 0 1.25vh;
+    text-decoration: none;
+}
+
+.info p {
+    font-size: 0.7em;
+    line-height: 1.8;
+}
+
+.contact a img {
+    margin-top: 1vh;
+    margin-bottom: -1vh;
+    width: 3.5vh;
+    height: auto;
+}
+
+.contact p:hover {
+    text-decoration: underline;
+}
+
+.contact hr {
+    margin-top: -3vh;
+}
+
+.active-nav {
+    border-bottom: 2px solid #7cd0f1;
+}
+
+.nav2 {
+    position: fixed;
+    display: none;
+    background: no-repeat center center url(../images/nav.png) #637b80;
+    background-size: cover;
+    background-blend-mode: multiply;
+    right: 0;
+    bottom:0;
+    top:0;
+    width: 0;
+    opacity: 0;
+    height: 100vh;
+    z-index: -1;
+    box-shadow: 0 -5px 30px 10px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0 -5px 30px 10px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 -5px 30px 10px rgba(0,0,0,0.25);
+    will-change: width;
+}
+
+.nav2 > .navLogo > a > img {
+    margin-left: 10vh;
+    width: 150px;
+    padding-top: 10%;
+}
+
+.nav2 .info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.nav2 ul {
+    padding-left: 10vh;
+    margin-top: 15%;
+}
+
+.nav2 ul li {
+    width: 100%;
+    margin-top: 8%;
+    list-style: none;
+}
+
+.nav2 ul li a {
+    font-family: "Lobster";
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 2.25vw;
+    position: relative;
+    right: -10vh;
+    opacity: 0;
+}
+
+.nav2 ul li a:hover, .nav2 ul li a:active {
+    color: #5c5c5c;
+}
+
+.close-icon {
+    cursor: pointer;
+    width: 100px;
+    position: fixed;
+    right: 0;
+    top: 50px;
+}
+
+@media (max-width: 999px) {
+    .show-icon {
+        margin-top: 4px;
+    }
+    
+    .nav2 ul {
+        margin: 0;
+    } 
+    
+    .nav2 > .navLogo > a > img {
+        margin-left: 15vh;
+    }
+    
+    .info p {
+        font-size: 0.6em;
+        line-height: 1.5;
+    }
+    
+    .nav2 .info {
+        right: 10vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav2 {
+        background-image: url(../images/nav-LOW.jpg);
+    }
+    
+    .nav2 .info {
+        display: none;
+    }
+    
+    .nav2 ul {
+        margin-top: 20%;
+    }
+    
+    .nav2 > ul > li {
+        margin-top: 12.5%;
+    }
+    
+    .nav2 > .navLogo > a > img {
+        margin-left: 10vh;
+    }
+}
+
+@media (max-width: 450px) {
+    .stickNav > .navLogo > a > img {
+        width: 100px;
+    }
+    .nav2 > ul > li {
+        margin-top: 15% !important;
+    }
+}

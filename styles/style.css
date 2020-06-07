@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Regular.ttf) format("TrueType");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Bold.ttf) format("TrueType");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Lalezar";
+    src: url(../fonts/Lalezar-Regular.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Lobster";
+    src: url(../fonts/Lobster-Regular.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Lobster2";
+    src: url(../fonts/LobsterTwo-Regular.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Montaga";
+    src: url(../fonts/Montaga-Regular.ttf) format("TrueType");
+}
+
+@font-face {
+    font-family: "Baloo";
+    src: url(../fonts/Baloo-Regular.ttf) format("TrueType");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Baloo";
+    src: url(../fonts/Baloo-Bold.ttf) format("TrueType");
+    font-weight: bold;
+}
+
+:root{
+    scrollbar-color: #96cdef #263133 !important;
+    scrollbar-width: thin !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #263133;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 200px;
+    background: #96cdef;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+
+body {
+    overflow: hidden;
+    font-family: "Roboto";
+    background-color: #212223;
+    width: 100%;
+    min-height:100%;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* Preloader */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #263133;
+    z-index: 1000;
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(../images/loading.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+}
+
+.hide {
+    display: none !important;
+}
+

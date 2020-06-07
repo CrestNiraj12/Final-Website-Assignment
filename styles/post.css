@@ -1,0 +1,481 @@
+.header-wrapper {
+    background: linear-gradient(90deg, #96cdef, #96cdef, #ff73c7);
+    height: 77vh;
+}
+
+.header {
+    background: url(../images/bg2.jpg) #578bac;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    border-bottom-right-radius: 200px;
+    height: 75vh;
+    padding-top: 30px;
+}
+
+.container {
+    margin: 5% 10% 0 10%;
+}
+
+.crumb {
+    color: #3b3b3b;
+    font-size: 1.1vw;
+    word-spacing: 10px;
+}
+
+.crumb > a {
+    font-family: "Roboto";
+    font-size: 1vw;
+    color: #878787;
+    letter-spacing: 2px;
+    line-height: 0.1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.crumb > a:hover, .crumb > a:active, .crumb > a:focus, .author-info > div > span > a:hover, .author-info > div > span > a:active, .author-info > div > span > a:focus{
+    background: -webkit-linear-gradient(0deg, #96cdef, #ff73c7);
+    background: -moz-linear-gradient(0deg, #96cdef, #ff73c7);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.title {
+    font-family: "Montaga";
+    font-size: 4vw;
+    letter-spacing: 2px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.author-info {
+    margin-top: 5%;
+}
+
+.author-info > a > img {
+    position: relative;
+    top: 3vh;
+    width: 10vh;
+    height: 10vh;
+    object-fit: cover;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.author-info > div {
+    color: #878787;
+    display: inline-block;
+    font-family: "Roboto";
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.author-info > div > span,  .author-info > div > span > a{
+    font-family: "Baloo";
+    color: #fff;
+}
+
+.author-info > div > span > a {
+    text-decoration: none;
+}
+
+.content-wrapper {
+    margin: 5% 10% 10% 10%;
+}
+
+.content {
+    display: inline-block;
+    width: 60%;
+    margin-right: 10%;
+}
+
+.content > h2 {
+    font-family: "Lalezar";
+    letter-spacing: 2px;
+    color: #96cdef;
+}
+
+.content > p {
+    font-family: "Baloo";
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.content > p > a {
+    color: #b7eef6;
+}
+
+.content > p > a:hover, .content > p > a:active, .content > p > a:focus {
+    color: #fb3c71;
+}
+
+.content > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 5% 0;
+    border-radius: 10px;
+}
+
+.align-right {
+    float: right;
+    display: inline-block;
+    width: 25%;
+}
+
+.related {
+    margin-bottom: 10vh;
+    border: 2px solid #e6e6e6;
+}
+
+.more-info {
+    border: 2px solid #0c92ab;
+    position: relative;
+    transition: top 0.5s ease-out;
+}
+
+.related > h1 {
+    font-family: "Lalezar";
+    margin: 0;
+    font-size: 2vw;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 1%;
+    background: #e6e6e6;
+    color: #3d3d3d;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.more-info > h1 {
+    font-family: "Lalezar";
+    margin: 0;
+    font-size: 2vw;
+    border-bottom: 1px solid #0c92ab;
+    padding: 1%;
+    background: #0c92ab;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.related ul, .more-info ul {
+    padding: 0;
+    margin: 10% 5%;
+    list-style: none;
+}
+
+.related li::before {
+    content: '';
+    position: absolute;
+    background: url(../images/pencil.png);
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+}
+
+.more-info li::before {
+    content: '';
+    position: absolute;
+    background: url(../images/external.png);
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+}
+
+.related li, .more-info li {
+    padding-bottom: 5%;
+}
+
+.related a {
+    font-family: "Baloo";
+    color: #e6e6e6;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-left: 20px;
+    font-size: 2.1vmin;
+}
+
+.more-info a {
+    font-family: "Lobster2";
+    color: #0c92ab;
+    text-decoration: none;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-left: 20px;
+    font-size: 2.1vmin;
+}
+
+.related a:hover, .related a:active, .related a:focus {
+    color: #96cdef;
+    text-decoration: underline;
+}
+
+.more-info a:active, .more-info a:hover, .more-info a:focus {
+    color: #e6e6e6;
+    text-decoration: underline;
+}
+
+input, .comment-section textarea {
+    font-family: "Roboto";
+    padding: 1% 2%;
+    outline: none;
+    letter-spacing: 0.5px;
+}
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    background-color: #3d3d3d;
+    padding: 5% 2% 5% 2%;
+    border: 2px dashed #fff;
+}
+
+legend {
+    color: #fff;
+    font-weight: bold;
+    font-family: "Lobster";
+    letter-spacing: 2px;
+    font-size: 2.5vw;
+    text-shadow: 4px 5px 3px #000;
+}
+
+.comment-section {
+    padding: 5% 0;
+    width: 60%;
+}
+
+.comment-section input[type="text"], .comment-section textarea {
+    background: #e6e6e6;
+    width: 90%;
+    margin: 0 5% 5% 5%;
+    border: 1px solid #000;
+    padding: 2% 3%;
+}
+
+.comment-section textarea {
+    resize: none;
+    letter-spacing: 0.5px;
+}
+
+input[type="submit"] {
+    font-family: "Lobster2";
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    margin-right: 5%;
+    padding: 1% 5%;
+    float: right;
+    transition: background 0.25s ease-in, color 0.25s ease-in;
+}
+
+input[type="submit"]:hover {
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.comments {
+    background: #e6e6e6;
+    margin-top: 10%;
+    padding: 5%;
+}
+
+.comments > h1 {
+    font-family: "Lobster2";
+    font-size: 2vw;
+}
+
+.comment {
+    background: #96cdef;
+    border-radius: 10px;
+    width: 100%;
+    padding: 3% 5%;
+    margin: 10% 0;
+    letter-spacing: 0.5px;
+}
+
+.comment > p {
+    font-family: "Baloo";
+    color: #333;
+}
+
+.modify {
+    float: right;
+    font-size: 0.75em;
+    color: #676767;
+    margin: -2% 5%;
+}
+
+.modify > button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.modify > button > svg {
+    width: 12px;
+    height: auto;
+    transition: transform 0.1s ease-in, fill 0.1s ease-in;
+}
+
+#edit > svg:hover, #delete > svg:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#edit > svg:hover {
+    fill: #0120ff;
+}
+
+#delete > svg:hover {
+    fill: #e44747;
+}
+
+@media (max-width: 999px) {
+    
+    .crumb, .crumb > a {
+        font-size: 1.5vw;
+    }
+    
+    .title {
+        font-size: 6.5vw;
+        margin: 10% 0;
+    }
+    
+    .author-info > div {
+        font-size: 0.6em;
+    }
+    
+    .author-info > a > img {
+        top: 2vh;
+        width: 7vh;
+        height: 7vh;
+    }
+    
+    .content {
+        display: block;
+        width: 100%;
+        margin-top: 10%;
+    }
+    
+    .align-right {
+        float: none;
+        display: grid;
+        grid-template-columns: 38vw 38vw;
+        grid-gap: 10%;
+        margin: 5% 0;
+    }
+    
+    .related, .more-info {
+        height: 47vh;
+    }
+    
+    .related a, .more-info a {
+        font-size: 2.5vmin;
+    }
+    
+    .comment-section {
+        width: 100%;
+    }
+    
+    .container {
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    
+    .container {
+        margin-top: 10%;
+    }
+    
+    .crumb, .crumb > a {
+        font-size: 2.2vw;
+    }
+    
+    .title {
+        font-size: 7vw;
+        margin: 18% 0;
+    }
+    
+    .align-right {
+        display: block;
+        width: 100%;
+        margin: 15% 0;
+    }
+    
+    .related, .more-info {
+        height: auto;
+    }
+    
+    .related > h1, .more-info > h1 {
+        font-size: 4.5vw;
+    }
+    
+    .related a, .more-info a {
+        font-size: 3.5vmin;
+    }
+    
+    legend, .comments > h1 {
+        font-size: 5vw;
+    }
+    
+    .comment > h3 {
+        font-size: 2.5vw;
+    }
+    
+    .comment > p {
+        font-size: 2vw;
+    }
+    
+    .modify {
+        margin-top: -5%;
+    }
+}
+
+@media (max-width: 450px) {
+    
+    .header {
+        background-position: left;
+    }
+    
+    .crumb, .crumb > a {
+        font-size: 2.75vw;
+    }
+    
+    .title {
+        margin: 25% 0;
+    }
+    
+    .nav2 > ul > li {
+        margin-top: 20% !important;
+    }
+    
+    .modify {
+        margin-top: -28%;
+        margin-right: -3%;
+    }
+    
+    .comment > h3 {
+        font-size: 3.5vw;
+    }
+    
+    .comment > p {
+        font-size: 3vw;
+    }
+} 
+
+
+

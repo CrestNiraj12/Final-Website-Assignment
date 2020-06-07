@@ -1,0 +1,158 @@
+body {
+    background: url(../images/pattern-bg.jpg) #363636;
+    background-size: cover;
+    background-blend-mode: color-burn;
+}
+
+.header {
+    padding-top: 30px;
+}
+
+.container {
+    color: #fff;
+    margin: 5%;
+    text-align: center;
+}
+
+.container > p {
+    font-family: "Lobster";
+    font-size: 1.5vw;
+    letter-spacing: 1.5px;
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    transition: padding 1.25s ease-in-out;
+    padding-top: 25px;
+    color: #96cdef;
+}
+
+.container > h1 {
+    font-size: 2.5vw;
+    letter-spacing: 1px;
+}
+
+.container > h1 > span {
+    color: #96cdef;
+    font-family: Montaga;
+    font-size: 2.75vw;
+}
+
+form {
+    width: 30%;
+    margin: 0 35% 20% 35%;
+}
+
+form > input {
+    height: 35px;
+}
+
+form > textarea {
+    resize: none;
+}
+
+form > input::placeholder, form > textarea::placeholder, form > input, form > textarea {
+    font-family: Roboto;
+    color: #939aa1;
+}
+
+form > input, form > textarea {
+    color: #000;
+    display: block;
+    margin: 5% 0;
+    border: 1px solid #000;
+    width: 100%;
+    padding: 5% 5%;
+    border-radius: 5px;
+    background: #fff;
+    letter-spacing: 0.5px;
+}
+
+form > button {
+    float: right;
+    font-family: "Baloo";
+    display: inline-block;
+    font-size: 0.7vw;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 2% 10%;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.25s ease-in, color 0.25s ease-in;
+}
+
+form > button:hover {
+    background: #fff;
+    color: #000;
+}
+
+@media (max-width: 1200px) {
+    form {
+        width: 40%;
+        margin: 0 30% 20% 30%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container > p {
+        font-size: 2.5vw;
+    }
+    
+    .container > h1 {
+        font-size: 3vw;
+    }
+    
+    .container > h1 > span {
+        font-size: 3.25vw;
+    }
+    
+    form > button {
+        font-size: 1.2vw;
+        padding: 2% 8%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 15% 20%;
+    }
+    
+    .container > p {
+        font-size: 4vw;
+    }
+    
+    .container > h1 {
+        font-size: 5vw;
+    }
+    
+    .container > h1 > span {
+        font-size: 5.25vw;
+    }
+    
+    form {
+        width: 60%;
+        margin: 0 20% 40% 20%;
+    }
+    
+    form > button {
+        font-size: 1.5vw;
+        padding: 2.5% 10%;
+    }
+
+    form > input::placeholder, form > textarea::placeholder, form > input, form > textarea {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 450px) {
+    form > input::placeholder, form > textarea::placeholder, form > input, form > textarea {
+        font-size: 3vw;
+    }
+    
+    form > button {
+        font-size: 2.5vw;
+    }
+}

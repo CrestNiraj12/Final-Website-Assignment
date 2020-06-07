@@ -1,0 +1,165 @@
+body {
+    background: url(../images/bg2.jpg) #494949;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.header {
+    background: none;
+    padding-top: 30px;
+}
+
+@keyframes animated-text {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 9em;
+    }
+}
+
+@keyframes animated-cursor {
+    0% {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    100% {
+        border-right-color: transparent;
+    }
+}
+
+hr {
+    display: block;
+    margin: 0 0 2% 0;
+    width: 10%;
+    border: 1.5px solid #ed2c3f;
+    background: #ed2c3f;
+}
+
+.container {
+    margin: 7% 10%;
+}
+
+.container p {
+    font-family: "Montaga";
+    letter-spacing: 1px;
+    font-size: 1.5vw;
+    color: #ed2c3f;
+}
+
+.btn {
+    border: 1.25px solid #ed2c3f;
+    padding: 1% 2%;
+    transition: background 0.25s ease-in;
+    width: 15%;
+}
+
+center > a {
+    color: #ed2c3f;
+    text-decoration: none;
+    font-size: 1.2vw;
+    font-family: Lobster;
+    letter-spacing: 0.5px;
+    transition: background 0.25s ease-in;
+}
+
+span {
+    font-family: 'Source Code Pro', monospace;  
+    font-size: 1.25vw;
+    color: #fff;
+    display: block;
+    margin-bottom: 2%;
+}
+
+h1.code {
+    border-right: solid 3px rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 5vw;
+    color: rgba(255, 255, 255, 0.75);
+    animation: animated-text 3s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+    will-change: width, border;
+}
+
+@media (max-width: 999px) {
+    .container p {
+        font-size: 2.5vw;
+    }
+    
+    hr, span {
+        margin: 0px 0 5% 2px;
+    }
+    
+    span {
+        font-size: 2.25vw;
+    }
+    
+    center > a {
+        font-size: 1.75vw;
+    }
+    
+    .btn {
+        padding: 2% 2%;
+        width: 25%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container p {
+        font-size: 4vw;
+        margin: 15% 0 10% 0;
+    }
+    
+    h1.code {
+        font-size: 8vw;
+    }
+    
+    hr {
+        margin-top: 10%;
+    }
+    
+    hr, span {
+        margin: 0 0 15% 2px;
+    }
+    
+    span {
+        font-size: 3vw;
+    }
+    
+    center > a {
+        font-size: 3vw;
+    }
+    
+    .btn {
+        padding: 3% 2%;
+        width: 50%;
+    }
+} 
+
+@media (max-width: 450px) {
+    .container p {
+        margin: 20% 0 15% 0;
+    }
+    
+    hr {
+        margin-top: 15%;
+    }
+    
+    hr, span {
+        margin: 0 0 20% 2px;
+    }
+    
+    span {
+        font-size: 3vw;
+    }
+    
+    center > a {
+        font-size: 3vw;
+    }
+    
+    .btn {
+        padding: 3% 2%;
+        width: 50%;
+    }
+} 
