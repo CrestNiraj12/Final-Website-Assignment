@@ -12,6 +12,8 @@ body {
     left: var(--mouse-x);
     top: var(--mouse-y);
     z-index: 999;
+    pointer-events: none;
+    transition: width 0.2s ease-out, height 0.2s ease-out;
 }
 
 .header {
@@ -68,7 +70,12 @@ body {
 
 .interests > #hobbies {
     color: #77f9ff;
+    margin-left: 0.5%;
+    display: inline-flex;
+    overflow-x: hidden;
     letter-spacing: 1px;
+    white-space: nowrap;
+    transition: width 2s ease-in-out;
 }
 
 .media {
@@ -102,6 +109,45 @@ body {
 
 #content {
     margin: 10%;
+}
+
+.family {
+    color: #027cab;
+    display: inline-block;
+    width: 100px;
+    height: 8vh;
+    -webkit-animation: spinner 2s infinite linear;
+    animation: spinner 2s infinite linear;
+}
+
+@-webkit-keyframes spinner {
+    0% { 
+       -webkit-transform: rotate3d(0, 1, 0, 0deg);
+       transform: rotate3d(0, 1, 0, 0deg);
+    }
+    50% { 
+       -webkit-transform: rotate3d(0, 1, 0, 180deg);
+       transform: rotate3d(0, 1, 0, 180deg);
+    }
+    100% { 
+        -webkit-transform: rotate3d(0, 1, 0, 360deg);
+       transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
+
+@keyframes spinner {
+    0% { 
+       -webkit-transform: rotate3d(0, 1, 0, 0deg);
+       transform: rotate3d(0, 1, 0, 0deg);
+    }
+    50% { 
+       -webkit-transform: rotate3d(0, 1, 0, 180deg);
+       transform: rotate3d(0, 1, 0, 180deg);
+    }
+    100% { 
+        -webkit-transform: rotate3d(0, 1, 0, 360deg);
+       transform: rotate3d(0, 1, 0, 360deg);
+    }
 }
 
 .skills > h1 {
