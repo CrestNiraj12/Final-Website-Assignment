@@ -20,7 +20,7 @@ body {
     font-size: 15px;
     text-align: center;
     font-family: "Lobster";
-    transform: translateY(80%);
+    transform: translateY(100%);
 }
 
 .header {
@@ -118,7 +118,7 @@ body {
 }
 
 #content {
-    margin: 10%;
+    margin: 10% 0;
 }
 
 .family {
@@ -168,7 +168,7 @@ body {
 }
 
 .skill {
-    margin: 15% 0;
+    margin: 15% 10%;
     height: 65vh;
 }
 
@@ -233,4 +233,27 @@ body {
 .skill-right > .text-wrap > p {
     margin-right: 10px;
 }
+
+.tools {
+    margin: 20% 0 0 0;
+}
+
+.tools > h1{
+    font-family: "Lalezar";
+    font-size: 6vw;
+    background: #263133;
+    color: #fff;
+    padding: 5% 0;
+}
+
+.tools > h1 > span {
+    line-height: 1.2;
+    letter-spacing: 1px;
+    display: block;
+    transition: transform 0.2s ease-out;
+}
+
+#left, #right {
+    text-align: center;
+} 
 

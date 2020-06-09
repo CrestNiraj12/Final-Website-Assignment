@@ -27,7 +27,7 @@ $("li > a").on({
 });
 
 var preScroll = 0;
-var rotate = 0;
+var move = 0;
 $(window).scroll(() => {
     var topScroll = $(window).scrollTop();
     
@@ -52,6 +52,11 @@ $(window).scroll(() => {
             else $(e.children[1]).css({transform: "translateX(-15vw)", filter: "blur(0)", opacity: "1"});
         }
     });
+    
+  
+    $("#left").css("transform", "translateX("+ (topScroll - $("#left").offset().top + 150) + "px)");
+    $("#right").css("transform", "translateX("+ (-topScroll + $("#right").offset().top - 300) + "px)");
+    
     preScroll = topScroll;
 });
 
