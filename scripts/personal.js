@@ -23,22 +23,44 @@ $("li > a").on({
     mouseenter: function() {
         $(".mover").css({width: $(this).width()+10, height: $(this).height()+10});
     },
-    mouseleave: () => {
-        $(".mover").css({width: "10px", height: "10px"});
-    }
+    mouseleave: () => $(".mover").css({width: "10px", height: "10px"})
 });
 
 var preScroll = 0;
+var rotate = 0;
 $(window).scroll(() => {
     var topScroll = $(window).scrollTop();
     
     if (topScroll > $("#content").offset().top-300) {
         $(".mover").css({borderColor: "#000"});
+        if (topScroll > preScroll) {
+            $(".stickNav").css({height: "0", transform: "scale(1)", opacity: "0", zIndex: "-1"}); 
+        } else{
+            $(".stickNav").css({height: "90px", transform: "scale(1)", opacity: "1", zIndex: "999"}); 
+        }
     } else if (topScroll < $("#content").offset().top) {
         $(".mover").css({borderColor: "#fff"});
     }
+    
+    $(".skill").each(function (n,e) {
+        if (topScroll >= $(e).offset().top-400 && topScroll < $(e).offset().top+350) {
+            $(e.children[0].children[0]).css("filter", "saturate(0.5) brightness(1)");
+            $(e.children[1]).css({transform: "translateX(0)", filter: "blur(0)", opacity: "1"});
+        } else {
+            $(e.children[0].children[0]).css("filter", "saturate(0) brightness(2)");
+            if (e.classList.contains("skill-left")) $(e.children[1]).css({transform: "translateX(15vw)", filter: "blur(0)", opacity: "1"});
+            else $(e.children[1]).css({transform: "translateX(-15vw)", filter: "blur(0)", opacity: "1"});
+        }
+    });
+    preScroll = topScroll;
 });
 
+$(".skill").on({
+    mouseenter: () => {
+        $(".mover").css({width: "100px", height: "100px"}).append("<p class='mover-text'>Skill</p>");
+    }, 
+    mouseleave: () => $(".mover").css({width: "10px", height: "10px"}).text("")
+})
 
 $("nav2 > ul > li > a").on("click", function() {
     $("#nav2-3").removeClass("active-nav");

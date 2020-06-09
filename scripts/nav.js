@@ -58,7 +58,7 @@ $(".close-icon").on("click", () => {
         $(".nav2 .info").css({opacity: "0", top: "0"});
         $(".stickNav").css({height: "12vh", transform: "scaleY(1)", opacity: "1", zIndex: "999"});
     })
-    $("body").css("overflow", "visible");
+    $("body").css("overflow-y", "visible");
 })
 
 $(".nav2 > ul > li > a").on("click", function() {
