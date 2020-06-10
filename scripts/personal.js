@@ -60,11 +60,22 @@ $(window).scroll(() => {
     preScroll = topScroll;
 });
 
-$(".skill").on({
-    mouseenter: () => {
-        $(".mover").css({width: "100px", height: "100px"}).append("<p class='mover-text'>Skill</p>");
-    }, 
-    mouseleave: () => $(".mover").css({width: "10px", height: "10px"}).text("")
+function hoverText(text) {
+    $(".mover").css({width: "100px", height: "100px"}).append(`<p class='mover-text'>${text}</p>`);
+}
+
+function resetMover() {
+    $(".mover").css({width: "10px", height: "10px", borderRadius: "50%"}).text("")
+}
+
+$(".skill h1").on({
+    mouseenter: function (){ $(".mover").css({width: $(this).width(), height: $(this).height(), borderRadius: "0"}) }, 
+    mouseleave: () => resetMover()
+})
+
+$(".main-1, .main-2, .web-1, .web-2, .web-3, .frame-1, .back, .db").on({
+    mouseenter: function () {hoverText($(this).children()[1].textContent)},
+    mouseleave: () => resetMover()
 })
 
 $("nav2 > ul > li > a").on("click", function() {

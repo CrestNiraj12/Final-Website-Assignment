@@ -21,6 +21,7 @@ body {
     text-align: center;
     font-family: "Lobster";
     transform: translateY(100%);
+    text-shadow: 1px 1px 1px #fff;
 }
 
 .header {
@@ -222,38 +223,187 @@ body {
     font-weight: normal;
     margin: 0;
     text-shadow: -2px 3px 0 #fff;
-}
-
-.text-wrap > p {
-    font-size: 1em;
-    text-indent: 10px;
-    text-shadow: -1px 1px 0 #fff;
-}
-
-.skill-right > .text-wrap > p {
-    margin-right: 10px;
+    display: inline-block;
 }
 
 .tools {
-    margin: 20% 0 0 0;
+    margin: 10% 0 30% 0;
 }
 
-.tools > h1{
-    font-family: "Lalezar";
-    font-size: 6vw;
-    background: #263133;
-    color: #fff;
+.tools > h1 {
+    font-size: 5vw;
+    color: #263133a3;
+    text-transform: uppercase;
     padding: 5% 0;
 }
 
 .tools > h1 > span {
-    line-height: 1.2;
-    letter-spacing: 1px;
     display: block;
     transition: transform 0.2s ease-out;
 }
 
 #left, #right {
     text-align: center;
-} 
+}
 
+.grid-align {
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-areas: 
+        "main-1 main-1 main-2"
+        "web-1 web-2 web-3"
+        "frame-1 back web-3"
+        "frame-1 db db";
+    grid-gap: 2%;
+    margin: 0 10%;
+    justify-content: space-around;
+}
+
+.card {
+    border: 5px double #263133;
+    padding: 5% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card > img {
+    width: 100px;
+    height: 100px;
+    filter: saturate(0);
+    transition: filter 0.2s ease-out;
+}
+
+.card:hover > img {
+    filter: saturate(1);
+}
+
+.card > p {
+    color: #263133;
+    font-size: 2em;
+    font-family: "Lalezar";
+    font-weight: bold;
+    display: none;
+}
+
+.main-1 {
+    grid-area: main-1;
+}
+
+.main-1 > p, .back > p {
+    display: inline-block;
+    margin-left: 3%;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.5s ease-in;
+}
+
+.main-1:hover > p, .back:hover > p {
+    width: 100px;
+}
+
+.main-2, .db > p {
+    grid-area: main-2;
+    flex-direction: column;
+}
+
+.main-2 > p, .web-1 > p, .db > p {
+    display: block;
+    position: absolute;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.main-2 > img, .web-1 > img, .db > img {
+    transition: transform 0.5s ease-in, opacity 0.5s ease-out;
+}
+
+.main-2:hover > img, .db:hover > img {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.web-1:hover > img {
+    transform: scale(2);
+    opacity: 0;
+}
+
+.main-2:hover > p, .web-1:hover > p, .db:hover > p {
+    opacity: 1;
+}
+
+.web-1 {
+    grid-area: web-1 ;
+    flex-direction: column;
+}
+
+.web-2 {
+    grid-area: web-2;
+    overflow: hidden;
+}
+
+.web-2 > img {
+    transform: translateX(25px);
+    transition: transform 0.35s ease-in-out;
+}
+
+.web-2:hover > img {
+    transform: translateX(-500px);
+}
+
+.web-2 > p {
+    display: inline-block;
+    transform: translateX(500px);
+    transition: transform 0.35s ease-in-out;
+}
+
+.web-2:hover > p {
+    transform: translateX(-50px);
+}
+
+.web-3 {
+    grid-area: web-3 ;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.web-3 > img {
+    transform: translateY(0);
+    transition: transform 0.35s ease-in-out;
+}
+
+.web-3:hover > img {
+    transform: translateY(-500px);
+}
+
+.web-3 > p {
+    display: inline-block;
+    transform: translateY(500px);
+    transition: transform 0.35s ease-in-out;
+}
+
+.web-3:hover > p {
+    transform: translateY(-50px);
+}
+
+
+.frame-1 {
+    grid-area: frame-1;
+}
+
+.frame-1 > img {
+    transition: transform 0.5s ease-in;
+}
+
+.frame-1:hover > img {
+    transform: scale(2);
+}
+
+.back {
+    grid-area: back;
+}
+
+.db {
+    grid-area: db;
+}
