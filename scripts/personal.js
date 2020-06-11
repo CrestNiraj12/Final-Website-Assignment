@@ -10,10 +10,11 @@ $(window).on("load", function() {
     setInterval(function(){
         xp += ((mouseX - xp)/6);
         yp += ((mouseY - yp)/6);
-        $(":root").css("--mouse-x", xp +'px').css("--mouse-y", yp +'px');
+        $(".mover").css("left", xp +'px').css("top", yp +'px');
     }, 20);
     
     $("#nav2-3").addClass("active-nav");
+    $("#nav2-32").addClass("active-nav");
     if ($(window).width() < 450) $(".desc-head-main").css({transform: "translateY(0)", opacity: "1", height: "25vh"});
     else if ($(window).width() < 800) $(".desc-head-main").css({transform: "translateY(0)", opacity: "1", height: "45vh"});
     else if ($(window).width() < 1000) $(".desc-head-main").css({transform: "translateY(0)", opacity: "1", height: "60vh"});
@@ -50,9 +51,9 @@ if ($(window).width() > 1000) {
         mouseleave: () => resetMover()
     })
     
-    $(".header > .stickNav, .header > #overlay, .header > .nav2").css("display", "none");
+    $(".header > .stickNav, .header > #overlay, .header > #overlay2, .header > .nav2").css("display", "none");
 } else {
-    $("body > .stickNav, body > #overlay, body > .nav2").css("display", "none");
+    $("body > .stickNav, body > #overlay, .header > #overlay2, body > .nav2").css("display", "none");
 }
 
 
@@ -125,6 +126,7 @@ $(window).scroll(() => {
 
 $("nav2 > ul > li > a").on("click", function() {
     $("#nav2-3").removeClass("active-nav");
+    $("#nav2-32").removeClass("active-nav");
 });
 
 var texts = ["Programming", "Travelling", "FPS Games", "Animals", "Food", "Testing new features", "Learning new things", "Challenges", "Binge Anime", "Marvel"];

@@ -43,7 +43,7 @@ $(".explore").on("click", () => {
             });
         });
     }
-    $("#overlay").css("display", "block");
+    $("#overlay, #overlay2").css("display", "block");
     if ($(window).width() > 1000) {
         $(".stickNav").css({height: "0", opacity: "0", zIndex: "-1"});
     }
@@ -51,7 +51,7 @@ $(".explore").on("click", () => {
 });
 
 $(".close-icon").on("click", () => {
-    $("#overlay").css("display", "none");
+    $("#overlay, #overlay2").css("display", "none");
     $(".nav2").animate({width: "0", opacity: "0"}, 200, () => {
         $(".nav2").css({display: "none", zIndex: "-1"});
         $(".nav2 ul li a").css({right: "-20vh", opacity: "0"});
