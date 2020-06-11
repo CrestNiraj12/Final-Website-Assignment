@@ -4,7 +4,7 @@
     right: 0;
     left: 0;
     height: 70vh;
-    background: no-repeat center center url(../images/footer.jpg) #263133;
+    background: no-repeat center center url(../images/footer2.jpg) #263133;
     background-size: cover;
     background-blend-mode: luminosity;
     margin: 0;
@@ -79,10 +79,6 @@
     
     .footer span a {
         font-size: 0.6em;
-    }
-
-    .footer {
-        background-image: url(../images/footer2.jpg);
     }
     
     .footer > p {
