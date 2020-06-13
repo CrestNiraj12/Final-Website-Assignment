@@ -60,7 +60,3 @@ $(".close-icon").on("click", () => {
     })
     $("body").css("overflow-y", "visible");
 })
-
-$(".nav2 > ul > li > a").on("click", function() {
-    $(this).addClass("active-nav2");
-});

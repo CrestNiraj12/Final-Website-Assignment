@@ -1,4 +1,4 @@
-.footer {
+footer {
     position: relative;
     bottom: 0;
     right: 0;
@@ -11,38 +11,38 @@
     overflow: hidden;
 }
 
-.footer span a, .footer span {
+footer span a, footer span {
     color: #626262;
 }
 
-.footer span a {
+footer span a {
     font-size: 0.7em;
     letter-spacing: 0.2px;
     text-decoration: none;
 }
  
-.footer span a:hover {
+footer span a:hover {
     text-decoration: underline;
 }
 
-.footer .links {
+footer .links {
     text-align: center;
     position: absolute;
     right: 10%;
     margin-top: 60vh;
 }
 
-.footer .info {
+footer .info {
     position: absolute;
     margin-top: 22vh;
     left: 10%;
 }
 
-.footer > p, .footer > img {
+footer > p, footer > img {
     position: absolute;
 }
 
-.footer > p {
+footer > p {
     right: 10%;
     color: #96cdef;
     font-family: "Lobster";
@@ -55,7 +55,7 @@
     transition: background 0.3s ease-in;
 }
 
-.footer > img {
+footer > img {
     right: 31vh;
     width: 6vh;
     height: auto;
@@ -64,7 +64,7 @@
     margin-top: 13vh;
 }
 
-.footer > p > span > img {;
+footer > p > span > img {;
     display: inline-block;
     visibility: hidden;
     position: relative;
@@ -77,58 +77,58 @@
 
 @media (max-width: 999px) {
     
-    .footer span a {
+    footer span a {
         font-size: 0.6em;
     }
     
-    .footer > p {
+    footer > p {
         right: 10%;
         font-size: 0.8em;
     }
     
-    .footer > img {
+    footer > img {
         right: 18.5vh;
     }
 }
 
 @media (max-width: 600px) {
 
-    .footer .info {
+    footer .info {
         left: 10%;
         margin-top: 10vh;
     }
     
-    .footer .links {
+    footer .links {
         right: 10%;
     }
     
-    .footer > p {
+    footer > p {
         right: 10%;
     }
     
-    .footer > img {
+    footer > img {
         right: 23vh;
     }
 }
 
 @media (max-width: 450px) {
     
-    .footer .info {
+    footer .info {
         left: 10%;
         margin-top: 10vh;
     }
     
-    .footer > img {
+    footer > img {
         right: 18vh;
     }
     
-    .footer .links {
+    footer .links {
         left: 10%;
         right: 10%;
         margin-top: 55vh;
     }
     
-    .footer .info {
+    footer .info {
         left: 10%;
         margin-top: 10vh;
     }
@@ -137,7 +137,7 @@
 
 @media (max-width: 450px) and (min-height: 800px) {
     
-    .footer .info {
+    footer .info {
         left: 10%;
         margin-top: 25vh;
     }

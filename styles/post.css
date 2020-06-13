@@ -3,7 +3,7 @@
     height: 77vh;
 }
 
-.header {
+header {
     background: url(../images/bg2.jpg) #578bac;
     background-size: cover;
     background-position: center;
@@ -446,7 +446,7 @@ input[type="submit"]:hover {
 
 @media (max-width: 450px) {
     
-    .header {
+    header {
         background-position: left;
     }
     

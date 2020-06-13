@@ -37,7 +37,7 @@ body {
     text-shadow: 1px 1px 1px #fff;
 }
 
-.header {
+header {
     background: url("../images/bg3.jpg") #263133;
     background-size: cover;
     background-blend-mode: multiply;
@@ -505,7 +505,7 @@ body {
 }
 
 @media (max-width: 1600px) {
-    .header {
+    header {
         clip-path: polygon(0% 0, 100% 0%, 100% 90%, 80% 95%, 20% 95%, 0% 90%);
     }    
 }
@@ -601,7 +601,7 @@ body {
         width: 25%;
     }
     
-    .header {
+    header {
         clip-path: polygon(0% 0, 100% 0%, 100% 87%, 80% 90%, 20% 90%, 0% 87%);
     }
     
@@ -653,6 +653,16 @@ body {
 }
 
 @media (max-width: 600px) {
+    .header {
+        background: url("../images/bg3-min.jpg") #263133;
+        background-size: cover;
+    }
+    
+    .tools > h1 {
+        background: url(../images/bg3-min.jpg) #263133 bottom center fixed;
+        background-size: cover;
+    }
+    
     .desc-head-left {
         float: none;
         position: absolute;

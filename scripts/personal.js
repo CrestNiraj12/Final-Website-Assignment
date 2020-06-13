@@ -51,9 +51,9 @@ if ($(window).width() > 1000) {
         mouseleave: () => resetMover()
     })
     
-    $(".header > .stickNav, .header > #overlay, .header > #overlay2, .header > .nav2").css("display", "none");
+    $("header > .stickNav, header > #overlay, header > #overlay2, header > .nav2").css("display", "none");
 } else {
-    $("body > .stickNav, body > #overlay, .header > #overlay2, body > .nav2").css("display", "none");
+    $("body > .stickNav, body > #overlay, header > #overlay2, body > .nav2").css("display", "none");
 }
 
 
@@ -136,7 +136,8 @@ var i = 0, j = 0;
 function changeText() {
     $("#hobbies").css("width", "0");
     setTimeout(() => {
-        $("#hobbies").text(texts[i]).css("width", "40%");
+        if ($(window).width() > 450) $("#hobbies").text(texts[i]).css("width", "40%");
+        else $("#hobbies").text(texts[i]).css("width", "100%");
         i++;
     }, 2000);
     if (i == 10) i = 0;

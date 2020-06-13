@@ -9,8 +9,6 @@ $(window).on('load', () => {
         $(".stickNav").css({transform: "scale(1)", position: "static", opacity: "1", zIndex: "1", backgroundColor: "transparent", boxShadow: "none"});
         $(".explore").css({top: "0"});
         $(".explore p").css({fontSize: "0.8em", marginTop: "19px"});
-    } else {
-        $("#nav").addClass("nav1");
     }
     $('body').delay(350).css({overflowY: 'visible'});
     $('body').scrollLeft(0);
@@ -41,16 +39,16 @@ $(".nav1 ul li:nth-child(3)").on({
     }
 });
 
-$(".footer > p ").on ({
+$("footer > p ").on ({
     mouseenter: () => {
-        $(".footer > p ").css({cursor: "pointer", backgroundColor: "#96cdef", color: "#1a1a1a"});
-        $(".footer > img").css({display: "none"});
-        $(".footer > p > span > img").css("visibility", "visible").animate({top: "0.6vh"}, 100);
+        $("footer > p ").css({cursor: "pointer", backgroundColor: "#96cdef", color: "#1a1a1a"});
+        $("footer > img").css({display: "none"});
+        $("footer > p > span > img").css("visibility", "visible").animate({top: "0.6vh"}, 100);
     },
     mouseleave: () => {
-        $(".footer > p ").css({backgroundColor: "transparent", color: "#96cdef"});
-        $(".footer > img").css({display: "block"});
-        $(".footer > p > span > img").css({visibility: "hidden", top: "3vh"});
+        $("footer > p ").css({backgroundColor: "transparent", color: "#96cdef"});
+        $("footer > img").css({display: "block"});
+        $("footer > p > span > img").css({visibility: "hidden", top: "3vh"});
     },
     click: () => {
         window.scroll({

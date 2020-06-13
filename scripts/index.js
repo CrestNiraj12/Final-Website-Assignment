@@ -106,16 +106,16 @@ $(".btn2").on({
     mouseleave: () => {onBtnLeave(".btn2")}
 });
 
-$(".footer > p ").on ({
+$("footer > p ").on ({
     mouseenter: () => {
-        $(".footer > p ").css({cursor: "pointer", backgroundColor: "#96cdef", color: "#1a1a1a"});
-        $(".footer > img").css({display: "none"});
-        $(".footer > p > span > img").css("visibility", "visible").animate({top: "0.6vh"}, 100);
+        $("footer > p ").css({cursor: "pointer", backgroundColor: "#96cdef", color: "#1a1a1a"});
+        $("footer > img").css({display: "none"});
+        $("footer > p > span > img").css("visibility", "visible").animate({top: "0.6vh"}, 100);
     },
     mouseleave: () => {
-        $(".footer > p ").css({backgroundColor: "transparent", color: "#96cdef"});
-        $(".footer > img").css({display: "block"});
-        $(".footer > p > span > img").css({visibility: "hidden", top: "3vh"});
+        $("footer > p ").css({backgroundColor: "transparent", color: "#96cdef"});
+        $("footer > img").css({display: "block"});
+        $("footer > p > span > img").css({visibility: "hidden", top: "3vh"});
     },
     click: () => {
         window.scroll({

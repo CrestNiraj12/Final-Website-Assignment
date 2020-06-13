@@ -1,4 +1,4 @@
-.header {
+header {
     background: no-repeat url(../images/bg.jpg);
     background-size: cover;
     height: 100vh;
@@ -369,7 +369,7 @@ h5 {
 
 @media (max-width: 600px) {
     
-    .header {
+    header {
         height: 100vh;
     }
     
@@ -457,7 +457,7 @@ h5 {
 
 @media (max-width: 450px) {
     
-    .header {
+    header {
         background: no-repeat url(../images/tokyo.jpg);
         background-size: cover;
     }
