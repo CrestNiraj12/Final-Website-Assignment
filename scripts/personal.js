@@ -100,6 +100,9 @@ $(window).scroll(() => {
             }
         });
         
+        $("#left").css("transform", "translateX("+ (topScroll - $("#left").offset().top + 200) + "px)");
+        $("#right").css("transform", "translateX("+ (-topScroll + $("#right").offset().top - 250) + "px)");
+        
     }
     
     $(".card").each(function(n,e) {
@@ -110,13 +113,6 @@ $(window).scroll(() => {
         }
     });
     
-    if ($(window).width() > 450) {
-        $("#left").css("transform", "translateX("+ (topScroll - $("#left").offset().top + 150) + "px)");
-        $("#right").css("transform", "translateX("+ (-topScroll + $("#right").offset().top - 300) + "px)");
-    } else {
-        $("#left").css("transform", "translateX("+ (topScroll - $("#left").offset().top + 200) + "px)");
-        $("#right").css("transform", "translateX("+ (-topScroll + $("#right").offset().top - 250) + "px)");
-    }
     preScroll = topScroll;
 });
 
