@@ -1,7 +1,7 @@
 body {
-    background: url(../images/pattern-bg.jpg) #363636;
+    background: url(../images/bg3-min.jpg) #363636;
     background-size: cover;
-    background-blend-mode: color-burn;
+    background-blend-mode: multiply;
 }
 
 .container {
@@ -29,7 +29,6 @@ body {
 
 .container > h1 > span {
     color: #96cdef;
-    font-family: Montaga;
     font-size: 2.75vw;
 }
 

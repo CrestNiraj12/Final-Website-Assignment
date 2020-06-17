@@ -6,7 +6,7 @@ footer {
     height: 70vh;
     background: no-repeat center center url(../images/footer2.jpg) #263133;
     background-size: cover;
-    background-blend-mode: luminosity;
+    background-blend-mode: multiply;
     margin: 0;
     overflow: hidden;
 }

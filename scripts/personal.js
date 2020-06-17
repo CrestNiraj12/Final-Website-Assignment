@@ -12,9 +12,6 @@ $(window).on("load", function() {
         yp += ((mouseY - yp)/6);
         $(".mover").css("left", xp +'px').css("top", yp +'px');
     }, 20);
-    
-    $("#nav2-3").addClass("active-nav");
-    $("#nav2-32").addClass("active-nav");
     if ($(window).width() < 450) $(".desc-head-main").css({transform: "translateY(0)", opacity: "1", height: "25vh"});
     else if ($(window).width() < 800) $(".desc-head-main").css({transform: "translateY(0)", opacity: "1", height: "45vh"});
     else if ($(window).width() < 1000) $(".desc-head-main").css({transform: "translateY(0)", opacity: "1", height: "60vh"});
@@ -72,37 +69,38 @@ $(window).scroll(() => {
         } else if (topScroll < $("#content").offset().top) {
             $(".mover").css({borderColor: "#fff"});
         }
-    }
     
-    $(".skill").each(function (n,e) {
-        if (topScroll >= $(e).offset().top-400 && topScroll < $(e).offset().top+350) {
-            $(e.children[0].children[0]).css("filter", "saturate(0.5) brightness(1)");
-            if ($(window).width() > 800) {
-                $(e.children[1]).css({transform: "translateX(0)", filter: "blur(0)", opacity: "1"});
-                if ($(window).width() <= 1000 && e.classList.contains("skill-right")) $(e.children[1]).css({transform: "translateX(18vw)", filter: "blur(0)", opacity: "1"});
-            } else {
-                $(e.children[1]).css({transform: "translateX(10vh)", filter: "blur(0)", opacity: "1"});
-                if (e.classList.contains("skill-right")) $(e.children[1]).css({transform: "translateX(15vw)", filter: "blur(0)", opacity: "1"});
-            }
-        } else {
-            $(e.children[0].children[0]).css("filter", "saturate(0) brightness(2)");
-            if ($(window).width() > 800) {
-                if (e.classList.contains("skill-left")) 
-                    $(e.children[1]).css({transform: "translateX(15vw)", filter: "blur(0)", opacity: "1"});
-                else {
-                    if ($(window).width() > 1000) $(e.children[1]).css({transform: "translateX(-15vw)", filter: "blur(0)", opacity: "1"});
-                    else $(e.children[1]).css({transform: "translateX(0px)", filter: "blur(0)", opacity: "1"});
-                }
-            }
-            else {
-                if (e.classList.contains("skill-left")) 
-                    $(e.children[1]).css({transform: "translateX(25vw)", filter: "blur(0)", opacity: "1"});
-                else {
+        $(".skill").each(function (n,e) {
+            if (topScroll >= $(e).offset().top-400 && topScroll < $(e).offset().top+350) {
+                $(e.children[0].children[0]).css("filter", "saturate(0.5) brightness(1)");
+                if ($(window).width() > 800) {
                     $(e.children[1]).css({transform: "translateX(0)", filter: "blur(0)", opacity: "1"});
+                    if ($(window).width() <= 1000 && e.classList.contains("skill-right")) $(e.children[1]).css({transform: "translateX(18vw)", filter: "blur(0)", opacity: "1"});
+                } else {
+                    $(e.children[1]).css({transform: "translateX(10vh)", filter: "blur(0)", opacity: "1"});
+                    if (e.classList.contains("skill-right")) $(e.children[1]).css({transform: "translateX(15vw)", filter: "blur(0)", opacity: "1"});
+                }
+            } else {
+                $(e.children[0].children[0]).css("filter", "saturate(0) brightness(2)");
+                if ($(window).width() > 800) {
+                    if (e.classList.contains("skill-left")) 
+                        $(e.children[1]).css({transform: "translateX(15vw)", filter: "blur(0)", opacity: "1"});
+                    else {
+                        if ($(window).width() > 1000) $(e.children[1]).css({transform: "translateX(-15vw)", filter: "blur(0)", opacity: "1"});
+                        else $(e.children[1]).css({transform: "translateX(0px)", filter: "blur(0)", opacity: "1"});
+                    }
+                }
+                else {
+                    if (e.classList.contains("skill-left")) 
+                        $(e.children[1]).css({transform: "translateX(25vw)", filter: "blur(0)", opacity: "1"});
+                    else {
+                        $(e.children[1]).css({transform: "translateX(0)", filter: "blur(0)", opacity: "1"});
+                    }
                 }
             }
-        }
-    });
+        });
+        
+    }
     
     $(".card").each(function(n,e) {
         if (topScroll >= $(e).offset().top-700) {
@@ -122,12 +120,6 @@ $(window).scroll(() => {
     preScroll = topScroll;
 });
 
-
-
-$("nav2 > ul > li > a").on("click", function() {
-    $("#nav2-3").removeClass("active-nav");
-    $("#nav2-32").removeClass("active-nav");
-});
 
 var texts = ["Programming", "Travelling", "FPS Games", "Animals", "Food", "Testing new features", "Learning new things", "Challenges", "Binge Anime", "Marvel"];
 var designs = ["design", "experience", "branding", "identity", "website"];

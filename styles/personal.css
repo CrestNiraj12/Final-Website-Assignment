@@ -539,6 +539,24 @@ header {
         margin: 2% 2% 1% 0;
     }
     
+    .img-wrap > img {
+        filter: saturate(1) brightness(1);
+    }
+
+    .text-wrap {
+        filter: none;
+        opacity: 1;
+        will-change: unset;
+    }
+
+    .skill-left > .text-wrap {
+        transform: translateX(0);
+    }
+
+    .skill-right > .text-wrap {
+        transform: translateX(50px);
+    }
+    
     .web-3 > p {
         font-size: 1.75vw;
     }

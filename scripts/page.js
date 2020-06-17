@@ -1,13 +1,7 @@
 $(window).on("load", () => {
-    $("#nav1-2").addClass("active");
-    $("#nav2-2").addClass("active-nav");
     $(".container > p").css({padding: 0});
 });
 
-$("nav2 > ul > li > a").on("click", function() {
-    $("#nav1-2").removeClass("active");
-    $("#nav2-2").removeClass("active-nav");
-});
 
 $("form > button").on("click", (e) => {
     e.preventDefault();
@@ -30,7 +24,7 @@ $("form > button").on("click", (e) => {
         $("form > input, form > textarea").each((n, e) => {
             e.value = "";
         });
-        alert("We have received your message. Thank you!");                                    
+        alert("I have received your message. Thank you!");                                    
     }
 });
 var texts = ["Feedback", "Offer", "Suggestion", "Question", "Support", "Recommendation"];

@@ -16,8 +16,6 @@ $(window).on('load', () => {
     $('body').scrollLeft(0);
     $(".container > h1").addClass('code');
     $(".container > p").css({padding: 0});
-    $("#nav1-1").addClass("active");
-    $("#nav2-1").addClass("active-nav");
     
     if ($(window).width() < 450)
         $(".wrapper > img").attr("src", "./images/niraj2-LOW.jpg");
@@ -161,9 +159,4 @@ $(".small1").on({
 $(".small2").on({
     mouseenter: () => {onPostHover(".small2", "15")},
     mouseleave: () => {onPostLeave(".small2")}
-});
-
-$("nav2 > ul > li > a").on("click", function() {
-    $("#nav1-1").removeClass("active");
-    $("#nav2-1").removeClass("active-nav");
 });
